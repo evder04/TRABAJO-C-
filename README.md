@@ -1,8 +1,7 @@
 # TRABAJOS C++
  ESTE CODIGO ESTA ECHO EN UN LENGUAJE DE C++ LA CUAL TIENE COMO FUNCION DAR MANEJO A UNA SALA DE CINE ES SEMCILLA PERO ES UN POCO DE LO QUE HEMOS APRENDIDO EN EL CURSO
-
+ 
 <br>
-
 #include <iostream>
 #include <stdlib.h>
 #include <cctype>
@@ -36,7 +35,6 @@ int main() {
                 porcentocupacion +=3.33;
             }
         }
-
         if (porcentocupacion<25){
             system("color 3");
         }
@@ -49,19 +47,16 @@ int main() {
         else{
             system("color b");
         }
-
         cout<<"\t\t _______________________________"<<endl;
         cout<<"\t\t|     ******PANTALLA******      |"<<endl;
         cout<<"\t\t|_______________________________|"<<endl;
         cout<<"\t";
-
         for (int i=0; i<30; i++) {
             cout<<"\t"<<sala[i];
             if (i==4 || i==9 || i==14 || i==19 || i==24 || i==29){
                 cout<<"\t"<<endl<<"\t\t \t \t \t \t \t"<<endl<<"\t";
             }
         }
-
         cout<<" \t \t \t \t \t \t";
         do {
             cout<<"\n-----------------------------------------------------------------------------------------------------------------------"<<endl;
@@ -71,7 +66,6 @@ int main() {
             cout<<"\n\nELIJE EL NUMERO DE OPCION: ";
             cin>>menu;
         }while(menu>3 || menu<1);
-
         switch (menu){
         case 1:{
             do{
@@ -81,10 +75,8 @@ int main() {
                     cout<<"\tOPCION NO VALIDA: "<<endl;
                 }
             }while(boletos>30 || boletos<1);
-
             string asientosSeleccionados[30];
             bool asientoValido;
-
             if(boletos==30){
                 for(int j=0; j<boletos; j++){
                     asiento=sala[j];
@@ -96,17 +88,14 @@ int main() {
             else{
                 for(int i=0; i<boletos; i++){
                     asientoValido = false;
-
                     do{
                         cout<<"\nINGRESA LA UBICACION DEL ASIENTO "<<i+1<<": ";
                         cin>>asiento;
                         mayusc(asiento);
-
                         if(asiento=="30"){
                             cout<<"El asiento 30 no esta disponible"<<endl;
                             break;
                         }
-
                         for(int z=0; z<30;z++){
                             if(asiento==asientosSeleccionados[z]){
                                 cout<<"\nEL ASIENTO YA SE ENCUENTRA OCUPADO"<<endl;
@@ -122,24 +111,19 @@ int main() {
                     } while(!asientoValido);
                 }
             }
-
             if(asientoValido){
                 cout<<"\nEL TOTAL A PAGAR ES: "<<costo*boletos<<endl;
-
                 do {
                     cout<<"DESEA CONFIRMAR LA COMPRA DE LOS BOLETOS (S/N): ";
                     cin>>confirmacion;
                     confirmacion = toupper(confirmacion);
-
                     if (confirmacion != 'S'&&confirmacion != 'N') {
                         cout<<"\nOPCION NO VALIDA"<<endl;
                     }
                 } while(confirmacion!='S' && confirmacion!='N');
-
                 if(confirmacion=='S'){
                     boletosvendidos += boletos;
             		venta += (costo * boletos);
-
                     cout<<"\t\t ______________________________" << endl;
                     cout<<"\t\t|     ******PANTALLA******     |" << endl;
                     cout<<"\t\t|______________________________|" << endl;
@@ -178,7 +162,6 @@ int main() {
                 final++;
             }
         }
-
         if(final==30){
             break;
         }
@@ -188,5 +171,3 @@ int main() {
     }while(menu>0&&menu<=2);
     return 0;
 }
-</br>
--->
