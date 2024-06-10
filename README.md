@@ -1,10 +1,8 @@
 # TRABAJOS C++
  ESTE CODIGO ESTA ECHO EN UN LENGUAJE DE C++ LA CUAL TIENE COMO FUNCION DAR MANEJO A UNA SALA DE CINE ES SEMCILLA PERO ES UN POCO DE LO QUE HEMOS APRENDIDO EN EL CURSO
 
+<br>
 
-
-
- 
 #include <iostream>
 #include <stdlib.h>
 #include <cctype>
@@ -190,4 +188,5 @@ int main() {
     }while(menu>0&&menu<=2);
     return 0;
 }
+</br>
 -->
