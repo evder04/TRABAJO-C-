@@ -1,4 +1,5 @@
 # TRABAJOS C++
+<!--  
 #include <iostream>
 #include <stdlib.h>
 #include <cctype>
@@ -184,3 +185,4 @@ int main() {
     }while(menu>0&&menu<=2);
     return 0;
 }
+-->
